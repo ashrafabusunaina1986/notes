@@ -2,7 +2,7 @@ import Note_overview from "@/components/note-overview";
 import React from "react";
 async function getNotes() {
   try {
-    const apires = await fetch("https://notes-murex-ten/api/get-note",{
+    const apires = await fetch("http://notes-murex-ten/api/get-note",{
       method:'GET',
       cache:'no-store'
     });
