@@ -4,7 +4,7 @@ async function getNotes() {
   try {
     const apires = await fetch("https://notes-murex-ten.vercele.app/api/get-note",{
       method:'GET',
-      cache:'no-cache'
+      cache:'no-store'
     });
     const result = await apires.json();
     return result.notes;
