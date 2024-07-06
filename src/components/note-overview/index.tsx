@@ -10,7 +10,6 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { any } from "joi";
 import { useRouter } from "next/navigation";
 
 export const init = { title: "", text1: "" };
@@ -40,7 +39,7 @@ function Note_overview({ notes }: any) {
       return;
     }
     const result = await res.json();
-    if (result.esuccess) {
+    if (result.success) {
       setDataNote(init);
       setOpenDialog(false);
       setLoading(false);
