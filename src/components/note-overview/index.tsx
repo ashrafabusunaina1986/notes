@@ -40,7 +40,7 @@ function Note_overview({ notes }: any) {
       return;
     }
     const result = await res.json();
-    if (result.success) {
+    if (result.esuccess) {
       setDataNote(init);
       setOpenDialog(false);
       setLoading(false);
@@ -67,6 +67,10 @@ function Note_overview({ notes }: any) {
     setDataNote({ title: note.title, text1: note.text });
     setOpenDialog(true);
   };
+  
+  useEffect(() => {
+    router.refresh();
+  }, [router]);
   return (
     <div className="flex flex-col bg-gradient-to-r from-purple-500 to-blue-500 min-h-screen">
       <div className="flex flex-col gap-5 p-6">
