@@ -53,7 +53,7 @@ function Note_overview({ notes }: any) {
   }
   const DelHandlerNote = async (id: any) => {
     try {
-      const delRes = await fetch(`/api/del-note?id=${id}`, {
+      const delRes = await fetch(`https://notes-murex-ten.vercel.app/api/del-note?id=${id}`, {
         method: "DELETE",
       });
       const result = await delRes.json();
